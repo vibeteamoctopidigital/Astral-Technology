@@ -19,7 +19,7 @@ export default function LogoSlider() {
     <div
       className="w-full overflow-hidden"
       style={{
-        background: "linear-gradient(90deg, #06B6D4 0%, #6366F1 50%, #8B5CF6 100%)",
+        background: "linear-gradient(90deg, #469FDD 0%, #6C70E9 50%, #897EE3 100%)",
         padding: "14px 0",
       }}
     >

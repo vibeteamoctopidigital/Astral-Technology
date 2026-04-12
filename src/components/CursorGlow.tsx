@@ -34,7 +34,7 @@ export default function CursorGlow() {
         height: "400px",
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%)",
+          "radial-gradient(circle, rgba(137,126,227,0.06) 0%, transparent 70%)",
         pointerEvents: "none",
         zIndex: 0,
         x: springX,

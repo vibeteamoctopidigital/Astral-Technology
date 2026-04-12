@@ -106,7 +106,7 @@ export default function Stats() {
               whileHover={{
                 y: -4,
                 boxShadow:
-                  "0 12px 40px rgba(124,58,237,0.08), 0 4px 12px rgba(0,0,0,0.04)",
+                  "0 12px 40px rgba(137,126,227,0.08), 0 4px 12px rgba(0,0,0,0.04)",
               }}
             >
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />

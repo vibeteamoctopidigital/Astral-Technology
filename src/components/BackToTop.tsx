@@ -30,8 +30,8 @@ export default function BackToTop() {
             width: "44px",
             height: "44px",
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #7C3AED, #4F46E5)",
-            boxShadow: "0 4px 16px rgba(124,58,237,0.4)",
+            background: "linear-gradient(135deg, #897EE3, #6C70E9)",
+            boxShadow: "0 4px 16px rgba(137,126,227,0.4)",
             color: "white",
             border: "none",
             transition: "transform 0.2s ease, box-shadow 0.2s ease",
@@ -39,12 +39,12 @@ export default function BackToTop() {
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = "scale(1.1)";
             e.currentTarget.style.boxShadow =
-              "0 6px 24px rgba(124,58,237,0.5)";
+              "0 6px 24px rgba(137,126,227,0.5)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = "scale(1)";
             e.currentTarget.style.boxShadow =
-              "0 4px 16px rgba(124,58,237,0.4)";
+              "0 4px 16px rgba(137,126,227,0.4)";
           }}
         >
           <ChevronUp size={20} />

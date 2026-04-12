@@ -90,20 +90,20 @@ export default function Navbar() {
             href="#contact"
             className="hidden md:inline-flex btn-shimmer items-center text-[14px] font-semibold text-white rounded-full"
             style={{
-              background: "linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)",
+              background: "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)",
               padding: "10px 22px",
-              boxShadow: "0 4px 15px rgba(124,58,237,0.35)",
+              boxShadow: "0 4px 15px rgba(137,126,227,0.35)",
               transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-1px)";
               e.currentTarget.style.boxShadow =
-                "0 6px 20px rgba(124,58,237,0.45)";
+                "0 6px 20px rgba(137,126,227,0.45)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
               e.currentTarget.style.boxShadow =
-                "0 4px 15px rgba(124,58,237,0.35)";
+                "0 4px 15px rgba(137,126,227,0.35)";
             }}
             onMouseDown={(e) =>
               (e.currentTarget.style.transform = "scale(0.97)")
@@ -185,9 +185,9 @@ export default function Navbar() {
                 className="btn-shimmer flex items-center justify-center text-[14px] font-semibold text-white rounded-full mt-4"
                 style={{
                   background:
-                    "linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)",
+                    "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)",
                   padding: "12px 28px",
-                  boxShadow: "0 4px 15px rgba(124,58,237,0.35)",
+                  boxShadow: "0 4px 15px rgba(137,126,227,0.35)",
                 }}
               >
                 Get Started

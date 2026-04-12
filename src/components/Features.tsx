@@ -68,7 +68,7 @@ function FeatureCard({
       whileHover={{
         y: -6,
         boxShadow:
-          "0 16px 48px rgba(124,58,237,0.1), 0 4px 12px rgba(0,0,0,0.04)",
+          "0 16px 48px rgba(137,126,227,0.1), 0 4px 12px rgba(0,0,0,0.04)",
       }}
     >
       {/* Icon box */}
@@ -80,13 +80,13 @@ function FeatureCard({
           borderRadius: "14px",
           background: "linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%)",
           boxShadow:
-            "inset 0 1px 2px rgba(255,255,255,0.8), 0 2px 8px rgba(124,58,237,0.12)",
+            "inset 0 1px 2px rgba(255,255,255,0.8), 0 2px 8px rgba(137,126,227,0.12)",
         }}
         whileHover={{ rotate: [0, -3, 3, 0], scale: 1.1 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <div className="absolute pointer-events-none" style={{ top: "-50%", left: "-50%", width: "200%", height: "200%", background: "linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 50%)" }} />
-        <feature.icon size={24} style={{ color: "#7C3AED" }} />
+        <feature.icon size={24} style={{ color: "#897EE3" }} />
       </motion.div>
 
       <h3

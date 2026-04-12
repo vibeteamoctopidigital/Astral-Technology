@@ -56,8 +56,8 @@ const labelBase: React.CSSProperties = {
 };
 
 function handleFocus(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = "#7C3AED";
-  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(124,58,237,0.07)";
+  e.currentTarget.style.borderColor = "#897EE3";
+  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(137,126,227,0.07)";
 }
 
 function handleBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
@@ -90,7 +90,7 @@ export default function Footer() {
             width: 350,
             height: 350,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(124,58,237,0.04), transparent 70%)",
+            background: "radial-gradient(circle, rgba(137,126,227,0.04), transparent 70%)",
             zIndex: 0,
           }}
         />
@@ -102,7 +102,7 @@ export default function Footer() {
             width: 280,
             height: 280,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(6,182,212,0.04), transparent 70%)",
+            background: "radial-gradient(circle, rgba(70,159,221,0.04), transparent 70%)",
             zIndex: 0,
           }}
         />
@@ -129,7 +129,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase" as const,
-                color: "#7C3AED",
+                color: "#897EE3",
                 display: "block",
                 marginBottom: 16,
               }}
@@ -156,7 +156,7 @@ export default function Footer() {
               something{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #7C3AED, #06B6D4)",
+                  background: "linear-gradient(135deg, #897EE3, #469FDD)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -199,14 +199,14 @@ export default function Footer() {
                       height: 20,
                       borderRadius: "50%",
                       background: "#F0EEFF",
-                      border: "1px solid rgba(124,58,237,0.15)",
+                      border: "1px solid rgba(137,126,227,0.15)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
                     }}
                   >
-                    <Check size={10} color="#7C3AED" strokeWidth={2.5} />
+                    <Check size={10} color="#897EE3" strokeWidth={2.5} />
                   </span>
                   {item}
                 </motion.div>
@@ -241,12 +241,12 @@ export default function Footer() {
                       width: 56,
                       height: 56,
                       borderRadius: "50%",
-                      background: "linear-gradient(135deg, #10B981, #059669)",
+                      background: "linear-gradient(135deg, #897EE3, #6C70E9)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       margin: "0 auto 18px",
-                      boxShadow: "0 6px 20px rgba(16,185,129,0.25)",
+                      boxShadow: "0 6px 20px rgba(137,126,227,0.25)",
                     }}
                   >
                     <Check size={24} color="white" strokeWidth={2.5} />
@@ -279,7 +279,7 @@ export default function Footer() {
                   >
                     <div>
                       <label style={labelBase}>
-                        Name <span style={{ color: "#7C3AED" }}>*</span>
+                        Name <span style={{ color: "#897EE3" }}>*</span>
                       </label>
                       <input
                         type="text"
@@ -292,7 +292,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <label style={labelBase}>
-                        Email <span style={{ color: "#7C3AED" }}>*</span>
+                        Email <span style={{ color: "#897EE3" }}>*</span>
                       </label>
                       <input
                         type="email"
@@ -308,7 +308,7 @@ export default function Footer() {
                   {/* Row 2 — Phone with country flag picker */}
                   <div style={{ marginBottom: 14 }}>
                     <label style={labelBase}>
-                      Phone <span style={{ color: "#7C3AED" }}>*</span>
+                      Phone <span style={{ color: "#897EE3" }}>*</span>
                     </label>
                     <PhoneInput
                       defaultCountry="us"
@@ -329,7 +329,7 @@ export default function Footer() {
                   {/* Row 3 — Message */}
                   <div>
                     <label style={labelBase}>
-                      Message <span style={{ color: "#7C3AED" }}>*</span>
+                      Message <span style={{ color: "#897EE3" }}>*</span>
                     </label>
                     <textarea
                       placeholder="Tell us about your project..."
@@ -352,7 +352,7 @@ export default function Footer() {
                     style={{
                       width: "100%",
                       padding: 13,
-                      background: "linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)",
+                      background: "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)",
                       color: "white",
                       border: "none",
                       borderRadius: 10,
@@ -371,7 +371,7 @@ export default function Footer() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = "translateY(-2px)";
-                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(124,58,237,0.32)";
+                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(137,126,227,0.32)";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = "translateY(0)";

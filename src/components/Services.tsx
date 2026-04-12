@@ -24,8 +24,8 @@ const tabs: TabData[] = [
     label: "Full-Stack Dev",
     tabIcon: "logos:react",
     tabIconType: "iconify",
-    gradient: "linear-gradient(135deg, #7C3AED, #4F46E5)",
-    accent: "#7C3AED",
+    gradient: "linear-gradient(135deg, #897EE3, #6C70E9)",
+    accent: "#897EE3",
     title: "Full-Stack Development",
     description: "End-to-end web applications built on modern frameworks. We handle the entire stack so you can focus on product-market fit.",
     features: [
@@ -41,8 +41,8 @@ const tabs: TabData[] = [
     label: "UI/UX Design",
     tabIcon: "logos:figma",
     tabIconType: "iconify",
-    gradient: "linear-gradient(135deg, #EC4899, #F43F5E)",
-    accent: "#EC4899",
+    gradient: "linear-gradient(135deg, #6C70E9, #469FDD)",
+    accent: "#6C70E9",
     title: "UI/UX Design",
     description: "Beautiful, intuitive interfaces that users love. From research to pixel-perfect handoff — design that converts.",
     features: [
@@ -58,8 +58,8 @@ const tabs: TabData[] = [
     label: "Cloud & DevOps",
     tabIcon: "logos:aws",
     tabIconType: "iconify",
-    gradient: "linear-gradient(135deg, #0EA5E9, #06B6D4)",
-    accent: "#0EA5E9",
+    gradient: "linear-gradient(135deg, #469FDD, #897EE3)",
+    accent: "#469FDD",
     title: "Cloud & DevOps",
     description: "Scalable, reliable infrastructure that lets you ship fast and sleep well. From containers to monitoring.",
     features: [
@@ -75,8 +75,8 @@ const tabs: TabData[] = [
     label: "Mobile Apps",
     tabIcon: "logos:flutter",
     tabIconType: "iconify",
-    gradient: "linear-gradient(135deg, #F97316, #FB923C)",
-    accent: "#F97316",
+    gradient: "linear-gradient(135deg, #897EE3, #469FDD)",
+    accent: "#897EE3",
     title: "Mobile Development",
     description: "Native and cross-platform mobile apps that feel fast and delightful. One codebase, every platform.",
     features: [
@@ -92,8 +92,8 @@ const tabs: TabData[] = [
     label: "Data & Analytics",
     tabIcon: "logos:python",
     tabIconType: "iconify",
-    gradient: "linear-gradient(135deg, #10B981, #059669)",
-    accent: "#10B981",
+    gradient: "linear-gradient(135deg, #469FDD, #6C70E9)",
+    accent: "#469FDD",
     title: "Data & Analytics",
     description: "Turn raw data into actionable insights. Pipelines, dashboards, and ML — powering data-driven decisions.",
     features: [
@@ -109,8 +109,8 @@ const tabs: TabData[] = [
     label: "Security",
     tabIcon: "",
     tabIconType: "lucide",
-    gradient: "linear-gradient(135deg, #EF4444, #DC2626)",
-    accent: "#EF4444",
+    gradient: "linear-gradient(135deg, #6C70E9, #897EE3)",
+    accent: "#6C70E9",
     title: "Security & Compliance",
     description: "Protect your users and your business. Compliance, audits, and 24/7 threat detection built in.",
     features: [
@@ -144,7 +144,7 @@ function CodeEditorMockup() {
         {["page.tsx", "api.ts", "globals.css"].map((f, i) => (
           <span key={f} style={{ background: i === 0 ? "#0F172A" : "transparent", color: i === 0 ? "#E2E8F0" : "#6B7280", fontSize: "12px", padding: "4px 12px", borderRadius: "6px 6px 0 0" }}>{f}</span>
         ))}
-        <span style={{ marginLeft: "auto", fontSize: "10px", background: "#1F2937", color: "#F97316", padding: "2px 6px", borderRadius: "4px" }}>.tsx</span>
+        <span style={{ marginLeft: "auto", fontSize: "10px", background: "#1F2937", color: "#897EE3", padding: "2px 6px", borderRadius: "4px" }}>.tsx</span>
       </div>
       <div className="flex">
         {/* File tree */}
@@ -172,7 +172,7 @@ function CodeEditorMockup() {
               <span>{line.code}</span>
             </div>
           ))}
-          <span style={{ color: "#7C3AED", animation: "blink 1s step-end infinite", marginLeft: "28px" }}>|</span>
+          <span style={{ color: "#897EE3", animation: "blink 1s step-end infinite", marginLeft: "28px" }}>|</span>
         </div>
       </div>
     </div>
@@ -185,12 +185,12 @@ function DesignCanvasMockup() {
       <div className="flex items-center" style={{ background: "white", height: "44px", borderBottom: "1px solid #F1F5F9", padding: "0 16px", gap: "8px" }}>
         {[0, 1, 2, 3].map((i) => (<div key={i} style={{ width: "28px", height: "28px", borderRadius: "6px", background: i === 0 ? "#EDE9FE" : "#F8FAFC", border: "1px solid #E2E8F0" }} />))}
         <div style={{ width: "1px", height: "20px", background: "#E2E8F0", margin: "0 8px" }} />
-        {["#7C3AED", "#06B6D4", "#F97316", "#10B981", "#F8FAFC"].map((c) => (<div key={c} className="rounded-full" style={{ width: "16px", height: "16px", background: c, border: c === "#F8FAFC" ? "1px solid #E2E8F0" : "none" }} />))}
+        {["#897EE3", "#6C70E9", "#469FDD", "#EDEAFC", "#F8FAFC"].map((c) => (<div key={c} className="rounded-full" style={{ width: "16px", height: "16px", background: c, border: c === "#F8FAFC" ? "1px solid #E2E8F0" : "none" }} />))}
       </div>
       <div className="flex" style={{ minHeight: "220px" }}>
         <div style={{ width: "120px", background: "white", borderRight: "1px solid #F1F5F9", padding: "12px" }}>
           <span style={{ fontSize: "11px", color: "#94A3B8", marginBottom: "8px", display: "block" }}>Layers</span>
-          {["Hero Section", "Navigation", "Footer"].map((l, i) => (<div key={l} className="flex items-center" style={{ height: "28px", borderRadius: "6px", fontSize: "12px", padding: "0 8px", color: i === 0 ? "#7C3AED" : "#475569", background: i === 0 ? "#EDE9FE" : "transparent" }}>{l}</div>))}
+          {["Hero Section", "Navigation", "Footer"].map((l, i) => (<div key={l} className="flex items-center" style={{ height: "28px", borderRadius: "6px", fontSize: "12px", padding: "0 8px", color: i === 0 ? "#897EE3" : "#475569", background: i === 0 ? "#EDE9FE" : "transparent" }}>{l}</div>))}
         </div>
         <div className="flex-1 flex flex-col" style={{ padding: "16px", gap: "8px", background: "white" }}>
           <div style={{ height: "40px", background: "#EDE9FE", borderRadius: "8px", border: "1px dashed #C4B5FD" }} />
@@ -211,21 +211,21 @@ function InfraDiagramMockup() {
         {[["M200 70 L130 120"], ["M200 70 L270 120"], ["M130 170 L170 210"], ["M270 170 L230 210"], ["M270 170 L320 210"]].map(([d], i) => (
           <path key={i} d={d} stroke="#C4B5FD" strokeWidth="2" strokeDasharray="6,3" style={{ animation: "dash 1s linear infinite" }} />
         ))}
-        <rect x="140" y="20" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="1.5" />
-        <circle cx="252" cy="28" r="5" fill="#22C55E" />
-        <text x="200" y="50" textAnchor="middle" fontSize="11" fontWeight="600" fill="#5B21B6">Load Balancer</text>
-        <rect x="70" y="120" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="1.5" />
-        <circle cx="182" cy="128" r="5" fill="#22C55E" />
-        <text x="130" y="150" textAnchor="middle" fontSize="11" fontWeight="600" fill="#5B21B6">App Server 1</text>
-        <rect x="210" y="120" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="1.5" />
-        <circle cx="322" cy="128" r="5" fill="#22C55E" />
-        <text x="270" y="150" textAnchor="middle" fontSize="11" fontWeight="600" fill="#5B21B6">App Server 2</text>
-        <rect x="130" y="210" width="120" height="50" rx="10" fill="#ECFEFF" stroke="#0EA5E9" strokeWidth="1.5" />
-        <circle cx="242" cy="218" r="5" fill="#22C55E" />
-        <text x="190" y="240" textAnchor="middle" fontSize="11" fontWeight="600" fill="#0369A1">PostgreSQL</text>
-        <rect x="270" y="210" width="110" height="50" rx="10" fill="#FEF3C7" stroke="#F97316" strokeWidth="1.5" />
-        <circle cx="372" cy="218" r="5" fill="#22C55E" />
-        <text x="325" y="240" textAnchor="middle" fontSize="11" fontWeight="600" fill="#C2410C">Redis Cache</text>
+        <rect x="140" y="20" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#897EE3" strokeWidth="1.5" />
+        <circle cx="252" cy="28" r="5" fill="#469FDD" />
+        <text x="200" y="50" textAnchor="middle" fontSize="11" fontWeight="600" fill="#6C5FCC">Load Balancer</text>
+        <rect x="70" y="120" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#897EE3" strokeWidth="1.5" />
+        <circle cx="182" cy="128" r="5" fill="#469FDD" />
+        <text x="130" y="150" textAnchor="middle" fontSize="11" fontWeight="600" fill="#6C5FCC">App Server 1</text>
+        <rect x="210" y="120" width="120" height="50" rx="10" fill="#EDE9FE" stroke="#897EE3" strokeWidth="1.5" />
+        <circle cx="322" cy="128" r="5" fill="#469FDD" />
+        <text x="270" y="150" textAnchor="middle" fontSize="11" fontWeight="600" fill="#6C5FCC">App Server 2</text>
+        <rect x="130" y="210" width="120" height="50" rx="10" fill="#EAF4FC" stroke="#469FDD" strokeWidth="1.5" />
+        <circle cx="242" cy="218" r="5" fill="#469FDD" />
+        <text x="190" y="240" textAnchor="middle" fontSize="11" fontWeight="600" fill="#3578B5">PostgreSQL</text>
+        <rect x="270" y="210" width="110" height="50" rx="10" fill="#EDEAFC" stroke="#897EE3" strokeWidth="1.5" />
+        <circle cx="372" cy="218" r="5" fill="#897EE3" />
+        <text x="325" y="240" textAnchor="middle" fontSize="11" fontWeight="600" fill="#6C5FCC">Redis Cache</text>
       </svg>
     </div>
   );
@@ -246,13 +246,13 @@ function PhoneMockup() {
             <span style={{ fontSize: "13px", fontWeight: 500, color: "#0F172A" }}>FlutterApp</span>
           </div>
           <div style={{ padding: "0 16px 8px", fontSize: "12px", color: "#64748B" }}>Welcome back, Alex</div>
-          <div style={{ margin: "0 12px", background: "linear-gradient(135deg, #7C3AED 0%, #4F46E5 50%, #06B6D4 100%)", borderRadius: "16px", padding: "14px", color: "white", position: "relative" }}>
+          <div style={{ margin: "0 12px", background: "linear-gradient(135deg, #897EE3 0%, #6C70E9 50%, #469FDD 100%)", borderRadius: "16px", padding: "14px", color: "white", position: "relative" }}>
             <div className="flex justify-between items-start">
               <div>
                 <div style={{ fontSize: "10px", opacity: 0.8 }}>Total Balance</div>
                 <div style={{ fontSize: "20px", fontWeight: 500, marginTop: "2px" }}>$124,580</div>
               </div>
-              <div style={{ width: "16px", height: "12px", borderRadius: "3px", background: "linear-gradient(135deg, #FBBF24, #F59E0B)" }} />
+              <div style={{ width: "16px", height: "12px", borderRadius: "3px", background: "linear-gradient(135deg, #897EE3, #6C70E9)" }} />
             </div>
             <div style={{ fontSize: "10px", marginTop: "6px" }}>
               <span style={{ background: "rgba(255,255,255,0.2)", borderRadius: "4px", padding: "2px 6px" }}>+12.4%</span>
@@ -262,12 +262,12 @@ function PhoneMockup() {
           <div className="grid grid-cols-4" style={{ padding: "10px 12px", gap: "4px", textAlign: "center" }}>
             {[{ l: "Send", i: "↑" }, { l: "Receive", i: "↓" }, { l: "Invest", i: "↗" }, { l: "More", i: "•••" }].map((a) => (
               <div key={a.l}>
-                <div className="mx-auto flex items-center justify-center" style={{ width: "36px", height: "36px", borderRadius: "50%", background: "white", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", marginBottom: "3px", fontSize: "14px", color: "#7C3AED" }}>{a.i}</div>
+                <div className="mx-auto flex items-center justify-center" style={{ width: "36px", height: "36px", borderRadius: "50%", background: "white", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", marginBottom: "3px", fontSize: "14px", color: "#897EE3" }}>{a.i}</div>
                 <span style={{ fontSize: "10px", color: "#64748B" }}>{a.l}</span>
               </div>
             ))}
           </div>
-          {[{ name: "Netflix", sub: "Subscription", amt: "-$15.99", color: "#EF4444", avatar: "#E50914" }, { name: "Salary", sub: "Deposit", amt: "+$4,200", color: "#10B981", avatar: "#7C3AED" }].map((item) => (
+          {[{ name: "Netflix", sub: "Subscription", amt: "-$15.99", color: "#6C70E9", avatar: "#6C70E9" }, { name: "Salary", sub: "Deposit", amt: "+$4,200", color: "#469FDD", avatar: "#897EE3" }].map((item) => (
             <div key={item.name} className="flex justify-between items-center" style={{ padding: "7px 14px", borderBottom: "0.5px solid #F1F5F9" }}>
               <div className="flex items-center" style={{ gap: "8px" }}>
                 <div className="flex items-center justify-center rounded-full" style={{ width: "28px", height: "28px", background: item.avatar, fontSize: "10px", fontWeight: 700, color: "white" }}>{item.name[0]}</div>
@@ -299,15 +299,15 @@ function DashboardMockup() {
       </div>
       <div className="grid grid-cols-3" style={{ gap: "8px", marginBottom: "16px" }}>
         {[
-          { label: "Total Users", value: "48,291", change: "+12.5%", spark: "M0,12 L5,10 L10,8 L15,11 L20,6 L25,4 L30,2", color: "#7C3AED" },
-          { label: "Revenue", value: "$89,240", change: "+8.7%", spark: "M0,14 L5,12 L10,10 L15,9 L20,7 L25,5 L30,3", color: "#10B981" },
-          { label: "Conversion", value: "3.24%", change: "+0.4%", spark: "M0,8 L5,10 L10,12 L15,11 L20,9 L25,6 L30,5", color: "#F97316" },
+          { label: "Total Users", value: "48,291", change: "+12.5%", spark: "M0,12 L5,10 L10,8 L15,11 L20,6 L25,4 L30,2", color: "#897EE3" },
+          { label: "Revenue", value: "$89,240", change: "+8.7%", spark: "M0,14 L5,12 L10,10 L15,9 L20,7 L25,5 L30,3", color: "#469FDD" },
+          { label: "Conversion", value: "3.24%", change: "+0.4%", spark: "M0,8 L5,10 L10,12 L15,11 L20,9 L25,6 L30,5", color: "#6C70E9" },
         ].map((m) => (
           <div key={m.label} style={{ background: "#F8FAFC", borderRadius: "10px", padding: "12px", border: "1px solid #F1F5F9" }}>
             <div style={{ fontSize: "11px", color: "#64748B" }}>{m.label}</div>
             <div style={{ fontSize: "17px", fontWeight: 500, color: "#0F172A" }}>{m.value}</div>
             <div className="flex items-center justify-between" style={{ marginTop: "4px" }}>
-              <span style={{ fontSize: "11px", color: "#10B981", fontWeight: 600 }}>{m.change}</span>
+              <span style={{ fontSize: "11px", color: "#469FDD", fontWeight: 600 }}>{m.change}</span>
               <svg width="40" height="16" viewBox="0 0 30 16"><polyline points={m.spark} fill="none" stroke={m.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </div>
           </div>
@@ -316,7 +316,7 @@ function DashboardMockup() {
       <div className="flex items-end justify-between" style={{ height: "100px", padding: "0 8px" }}>
         {bars.map((h, i) => (
           <div key={i} className="flex flex-col items-center" style={{ gap: "4px" }}>
-            <div className="chart-bar" style={{ width: "28px", height: `${h}%`, background: "linear-gradient(180deg, #7C3AED, #4F46E5)", borderRadius: "4px 4px 0 0", animationDelay: `${i * 0.1}s` }} />
+            <div className="chart-bar" style={{ width: "28px", height: `${h}%`, background: "linear-gradient(180deg, #897EE3, #6C70E9)", borderRadius: "4px 4px 0 0", animationDelay: `${i * 0.1}s` }} />
             <span style={{ fontSize: "10px", color: "#94A3B8" }}>{days[i]}</span>
           </div>
         ))}
@@ -326,8 +326,8 @@ function DashboardMockup() {
         <div className="relative flex items-center justify-center" style={{ width: "56px", height: "56px" }}>
           <svg width="56" height="56" viewBox="0 0 56 56">
             <circle cx="28" cy="28" r="22" fill="none" stroke="#E2E8F0" strokeWidth="6" />
-            <circle cx="28" cy="28" r="22" fill="none" stroke="#7C3AED" strokeWidth="6" strokeDasharray="62 138" strokeDashoffset="0" strokeLinecap="round" />
-            <circle cx="28" cy="28" r="22" fill="none" stroke="#06B6D4" strokeWidth="6" strokeDasharray="42 138" strokeDashoffset="-62" strokeLinecap="round" />
+            <circle cx="28" cy="28" r="22" fill="none" stroke="#897EE3" strokeWidth="6" strokeDasharray="62 138" strokeDashoffset="0" strokeLinecap="round" />
+            <circle cx="28" cy="28" r="22" fill="none" stroke="#469FDD" strokeWidth="6" strokeDasharray="42 138" strokeDashoffset="-62" strokeLinecap="round" />
           </svg>
           <span className="absolute" style={{ fontSize: "8px", color: "#94A3B8", fontWeight: 600 }}>Traffic</span>
         </div>
@@ -339,13 +339,13 @@ function DashboardMockup() {
 function SecurityTerminalMockup({ activeKey }: { activeKey: number }) {
   const lines = [
     { delay: 0, text: "$ running security audit...", color: "#E2E8F0" },
-    { delay: 0.4, text: "\u2713 Scanning dependencies (247 packages)", color: "#22C55E" },
-    { delay: 0.8, text: "\u2713 Checking OWASP top 10 vulnerabilities", color: "#22C55E" },
-    { delay: 1.2, text: "\u2713 Running penetration test suite", color: "#22C55E" },
-    { delay: 1.6, text: "\u2713 Validating SSL/TLS configuration", color: "#22C55E" },
-    { delay: 2.0, text: "\u2713 Auditing access controls (IAM)", color: "#22C55E" },
+    { delay: 0.4, text: "\u2713 Scanning dependencies (247 packages)", color: "#469FDD" },
+    { delay: 0.8, text: "\u2713 Checking OWASP top 10 vulnerabilities", color: "#469FDD" },
+    { delay: 1.2, text: "\u2713 Running penetration test suite", color: "#469FDD" },
+    { delay: 1.6, text: "\u2713 Validating SSL/TLS configuration", color: "#469FDD" },
+    { delay: 2.0, text: "\u2713 Auditing access controls (IAM)", color: "#469FDD" },
     { delay: 2.4, text: "\u2501".repeat(30), color: "#475569" },
-    { delay: 2.8, text: "\u2713 All 47 checks passed. Score: 98/100", color: "#A78BFA" },
+    { delay: 2.8, text: "\u2713 All 47 checks passed. Score: 98/100", color: "#897EE3" },
     { delay: 3.2, text: "\u2192 Report saved to /reports/audit-2026.pdf", color: "#94A3B8" },
   ];
   return (
@@ -356,7 +356,7 @@ function SecurityTerminalMockup({ activeKey }: { activeKey: number }) {
       </div>
       <div style={{ padding: "16px 20px", fontFamily: "monospace", fontSize: "12.5px", lineHeight: 2 }}>
         {lines.map((line, i) => (<div key={i} className="terminal-line" style={{ color: line.color, animationDelay: `${line.delay}s` }}>{line.text}</div>))}
-        <span style={{ color: "#22C55E", animation: "blink 1s step-end infinite" }}>|</span>
+        <span style={{ color: "#469FDD", animation: "blink 1s step-end infinite" }}>|</span>
       </div>
     </div>
   );
@@ -445,10 +445,10 @@ export default function Services() {
                   padding: "10px 22px",
                   fontSize: "14px",
                   fontWeight: isActive ? 600 : 500,
-                  background: isActive ? "linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)" : "transparent",
+                  background: isActive ? "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)" : "transparent",
                   border: isActive ? "1.5px solid transparent" : "1.5px solid #E2E8F0",
                   color: isActive ? "white" : "#64748B",
-                  boxShadow: isActive ? "0 4px 16px rgba(124,58,237,0.35)" : "none",
+                  boxShadow: isActive ? "0 4px 16px rgba(137,126,227,0.35)" : "none",
                   transition: "background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease",
                 }}
               >
@@ -457,7 +457,7 @@ export default function Services() {
                     <Icon icon={t.tabIcon} width={16} height={16} />
                   </span>
                 ) : (
-                  <ShieldCheck size={16} style={{ color: isActive ? "white" : "#EF4444" }} />
+                  <ShieldCheck size={16} style={{ color: isActive ? "white" : "#6C70E9" }} />
                 )}
                 {t.label}
 

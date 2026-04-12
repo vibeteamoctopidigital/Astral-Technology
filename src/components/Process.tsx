@@ -42,49 +42,49 @@ function StepIcon({ index }: { index: number }) {
   if (index === 0)
     return (
       <svg width="24" height="24" viewBox="0 0 44 44" fill="none">
-        <rect x="7" y="4" width="20" height="26" rx="3" stroke="#7C3AED" strokeWidth="2" fill="#EDE9FE" fillOpacity="0.5" />
-        <rect x="10" y="10" width="14" height="1.5" rx="0.75" fill="#7C3AED" opacity="0.55" />
-        <rect x="10" y="14" width="10" height="1.5" rx="0.75" fill="#7C3AED" opacity="0.4" />
-        <rect x="10" y="18" width="12" height="1.5" rx="0.75" fill="#7C3AED" opacity="0.4" />
-        <circle cx="24" cy="28" r="7" stroke="#7C3AED" strokeWidth="2.2" fill="none" />
+        <rect x="7" y="4" width="20" height="26" rx="3" stroke="#897EE3" strokeWidth="2" fill="#EDE9FE" fillOpacity="0.5" />
+        <rect x="10" y="10" width="14" height="1.5" rx="0.75" fill="#897EE3" opacity="0.55" />
+        <rect x="10" y="14" width="10" height="1.5" rx="0.75" fill="#897EE3" opacity="0.4" />
+        <rect x="10" y="18" width="12" height="1.5" rx="0.75" fill="#897EE3" opacity="0.4" />
+        <circle cx="24" cy="28" r="7" stroke="#897EE3" strokeWidth="2.2" fill="none" />
         <circle cx="24" cy="28" r="3" fill="#EDE9FE" />
-        <line x1="29.5" y1="33.5" x2="35" y2="39" stroke="#7C3AED" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="29.5" y1="33.5" x2="35" y2="39" stroke="#897EE3" strokeWidth="2.5" strokeLinecap="round" />
       </svg>
     );
   if (index === 1)
     return (
       <svg width="24" height="24" viewBox="0 0 44 44" fill="none">
-        <rect x="11" y="4" width="16" height="28" rx="3.5" stroke="#7C3AED" strokeWidth="1.8" fill="#EDE9FE" fillOpacity="0.35" />
-        <rect x="15" y="6.5" width="8" height="1.5" rx="0.75" fill="#7C3AED" fillOpacity="0.4" />
-        <rect x="13" y="9.5" width="12" height="3" rx="1" fill="#7C3AED" fillOpacity="0.35" />
-        <rect x="13" y="14.5" width="8" height="2" rx="1" fill="#7C3AED" fillOpacity="0.25" />
-        <rect x="13" y="18" width="10" height="2" rx="1" fill="#7C3AED" fillOpacity="0.25" />
-        <path d="M29 8 L29 20 L32.5 16.5 L34.5 21.5 L36.5 20.8 L34.5 15.5 L38 15.5 Z" fill="#7C3AED" fillOpacity="0.75" />
+        <rect x="11" y="4" width="16" height="28" rx="3.5" stroke="#897EE3" strokeWidth="1.8" fill="#EDE9FE" fillOpacity="0.35" />
+        <rect x="15" y="6.5" width="8" height="1.5" rx="0.75" fill="#897EE3" fillOpacity="0.4" />
+        <rect x="13" y="9.5" width="12" height="3" rx="1" fill="#897EE3" fillOpacity="0.35" />
+        <rect x="13" y="14.5" width="8" height="2" rx="1" fill="#897EE3" fillOpacity="0.25" />
+        <rect x="13" y="18" width="10" height="2" rx="1" fill="#897EE3" fillOpacity="0.25" />
+        <path d="M29 8 L29 20 L32.5 16.5 L34.5 21.5 L36.5 20.8 L34.5 15.5 L38 15.5 Z" fill="#897EE3" fillOpacity="0.75" />
       </svg>
     );
   if (index === 2)
     return (
       <svg width="24" height="24" viewBox="0 0 44 44" fill="none">
-        <rect x="4" y="7" width="36" height="28" rx="4" fill="#E0F2FE" fillOpacity="0.6" stroke="#0EA5E9" strokeWidth="1.5" strokeOpacity="0.5" />
-        <rect x="4" y="7" width="36" height="10" rx="4" fill="#0EA5E9" fillOpacity="0.15" />
-        <rect x="4" y="13" width="36" height="4" fill="#0EA5E9" fillOpacity="0.15" />
+        <rect x="4" y="7" width="36" height="28" rx="4" fill="#EAF4FC" fillOpacity="0.6" stroke="#469FDD" strokeWidth="1.5" strokeOpacity="0.5" />
+        <rect x="4" y="7" width="36" height="10" rx="4" fill="#469FDD" fillOpacity="0.15" />
+        <rect x="4" y="13" width="36" height="4" fill="#469FDD" fillOpacity="0.15" />
         <circle cx="11" cy="12" r="2.3" fill="#FF5F56" />
         <circle cx="18.5" cy="12" r="2.3" fill="#FEBC2E" />
         <circle cx="26" cy="12" r="2.3" fill="#28C840" />
-        <rect x="8" y="21" width="4" height="2" rx="1" fill="#0EA5E9" fillOpacity="0.8" />
-        <rect x="14" y="21" width="8" height="2" rx="1" fill="#0EA5E9" fillOpacity="0.5" />
-        <rect x="11" y="26" width="14" height="2" rx="1" fill="#0EA5E9" fillOpacity="0.4" />
+        <rect x="8" y="21" width="4" height="2" rx="1" fill="#469FDD" fillOpacity="0.8" />
+        <rect x="14" y="21" width="8" height="2" rx="1" fill="#469FDD" fillOpacity="0.5" />
+        <rect x="11" y="26" width="14" height="2" rx="1" fill="#469FDD" fillOpacity="0.4" />
       </svg>
     );
   return (
     <svg width="24" height="24" viewBox="0 0 44 44" fill="none">
-      <path d="M7 9 L7.8 11.5 L10.5 11.5 L8.4 13.1 L9.2 15.5 L7 14 L4.8 15.5 L5.6 13.1 L3.5 11.5 L6.2 11.5 Z" fill="#7C3AED" fillOpacity="0.4" />
-      <ellipse cx="22" cy="20" rx="14" ry="5.5" stroke="#7C3AED" strokeWidth="0.9" fill="none" opacity="0.18" strokeDasharray="4 3" />
-      <path d="M22 4 C22 4 30 9 31 19 L27 23 L17 23 L13 19 C14 9 22 4 22 4 Z" fill="#7C3AED" fillOpacity="0.85" />
-      <circle cx="22" cy="15" r="3.5" stroke="white" strokeWidth="1.5" fill="#7C3AED" fillOpacity="0.25" />
-      <path d="M17 23 L10 30 L17 27.5 Z" fill="#7C3AED" fillOpacity="0.55" />
-      <path d="M27 23 L34 30 L27 27.5 Z" fill="#7C3AED" fillOpacity="0.55" />
-      <path d="M19.5 23 C19.5 23 22 33 22 33 C22 33 24.5 23 24.5 23 Z" fill="#7C3AED" fillOpacity="0.7" />
+      <path d="M7 9 L7.8 11.5 L10.5 11.5 L8.4 13.1 L9.2 15.5 L7 14 L4.8 15.5 L5.6 13.1 L3.5 11.5 L6.2 11.5 Z" fill="#897EE3" fillOpacity="0.4" />
+      <ellipse cx="22" cy="20" rx="14" ry="5.5" stroke="#897EE3" strokeWidth="0.9" fill="none" opacity="0.18" strokeDasharray="4 3" />
+      <path d="M22 4 C22 4 30 9 31 19 L27 23 L17 23 L13 19 C14 9 22 4 22 4 Z" fill="#897EE3" fillOpacity="0.85" />
+      <circle cx="22" cy="15" r="3.5" stroke="white" strokeWidth="1.5" fill="#897EE3" fillOpacity="0.25" />
+      <path d="M17 23 L10 30 L17 27.5 Z" fill="#897EE3" fillOpacity="0.55" />
+      <path d="M27 23 L34 30 L27 27.5 Z" fill="#897EE3" fillOpacity="0.55" />
+      <path d="M19.5 23 C19.5 23 22 33 22 33 C22 33 24.5 23 24.5 23 Z" fill="#897EE3" fillOpacity="0.7" />
     </svg>
   );
 }
@@ -97,8 +97,8 @@ function ConnectorDot() {
         height: 14,
         borderRadius: "50%",
         background: "white",
-        border: "2.5px solid #7C3AED",
-        boxShadow: "0 0 0 5px rgba(124,58,237,0.1), 0 0 0 9px rgba(124,58,237,0.04)",
+        border: "2.5px solid #897EE3",
+        boxShadow: "0 0 0 5px rgba(137,126,227,0.1), 0 0 0 9px rgba(137,126,227,0.04)",
         flexShrink: 0,
         zIndex: 2,
         position: "relative",
@@ -136,7 +136,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
           left: 0,
           right: 0,
           height: 3,
-          background: "linear-gradient(90deg, #7C3AED, #06B6D4)",
+          background: "linear-gradient(90deg, #897EE3, #469FDD)",
           borderRadius: "20px 20px 0 0",
           transform: "scaleX(0)",
           transformOrigin: "left",
@@ -152,7 +152,7 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
           letterSpacing: "-0.05em",
           lineHeight: 1,
           marginBottom: 14,
-          background: "linear-gradient(135deg, rgba(124,58,237,0.13), rgba(6,182,212,0.07))",
+          background: "linear-gradient(135deg, rgba(137,126,227,0.13), rgba(70,159,221,0.07))",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -213,15 +213,15 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
                 width: 16,
                 height: 16,
                 borderRadius: "50%",
-                border: "1.5px solid rgba(124,58,237,0.2)",
-                background: "rgba(124,58,237,0.04)",
+                border: "1.5px solid rgba(137,126,227,0.2)",
+                background: "rgba(137,126,227,0.04)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 flexShrink: 0,
               }}
             >
-              <Check size={9} color="#7C3AED" strokeWidth={2.5} />
+              <Check size={9} color="#897EE3" strokeWidth={2.5} />
             </div>
             <span style={{ fontSize: 13, color: "#475569" }}>{item}</span>
           </div>
@@ -255,7 +255,7 @@ export default function Process() {
               fontSize: 12,
               fontWeight: 600,
               letterSpacing: "0.13em",
-              color: "#7C3AED",
+              color: "#897EE3",
               textTransform: "uppercase" as const,
               display: "block",
               marginBottom: 14,
@@ -311,9 +311,9 @@ export default function Process() {
           >
             <defs>
               <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#7C3AED" stopOpacity="0.25" />
-                <stop offset="50%" stopColor="#06B6D4" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#7C3AED" stopOpacity="0.25" />
+                <stop offset="0%" stopColor="#897EE3" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#469FDD" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#897EE3" stopOpacity="0.25" />
               </linearGradient>
             </defs>
 
@@ -336,13 +336,13 @@ export default function Process() {
                 cy={dot.cy}
                 r={5}
                 fill="white"
-                stroke="#7C3AED"
+                stroke="#897EE3"
                 strokeWidth="2"
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 + i * 0.4, type: "spring", stiffness: 200 }}
-                style={{ filter: "drop-shadow(0 0 6px rgba(124,58,237,0.5))" }}
+                style={{ filter: "drop-shadow(0 0 6px rgba(137,126,227,0.5))" }}
               />
             ))}
           </svg>

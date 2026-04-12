@@ -61,7 +61,7 @@ function FAQItem({
           style={{
             fontSize: "17px",
             fontWeight: 600,
-            color: isOpen ? "#7C3AED" : "#0F172A",
+            color: isOpen ? "#897EE3" : "#0F172A",
             paddingRight: "16px",
             transition: "color 0.2s ease",
           }}
@@ -76,7 +76,7 @@ function FAQItem({
           <ChevronDown
             size={20}
             style={{
-              color: isOpen ? "#7C3AED" : "#94A3B8",
+              color: isOpen ? "#897EE3" : "#94A3B8",
               transition: "color 0.2s ease",
             }}
           />

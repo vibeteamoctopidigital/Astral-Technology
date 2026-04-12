@@ -272,9 +272,9 @@ export default function TechStack() {
               transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#7C3AED";
-              e.currentTarget.style.color = "#7C3AED";
-              e.currentTarget.style.background = "rgba(124,58,237,0.04)";
+              e.currentTarget.style.borderColor = "#897EE3";
+              e.currentTarget.style.color = "#897EE3";
+              e.currentTarget.style.background = "rgba(137,126,227,0.04)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#CBD5E1";
@@ -282,7 +282,7 @@ export default function TechStack() {
               e.currentTarget.style.background = "transparent";
             }}
           >
-            <Plus size={16} style={{ color: "#7C3AED" }} />
+            <Plus size={16} style={{ color: "#897EE3" }} />
             Using a different stack? We adapt to yours.
           </span>
         </motion.div>

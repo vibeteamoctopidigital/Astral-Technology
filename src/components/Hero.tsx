@@ -25,7 +25,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 15%, #e0e7ff 30%, #dbeafe 45%, #ecfeff 60%, #f0fdf4 75%, #faf5ff 90%, #fdf4ff 100%)",
+            "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 15%, #e8e6f9 30%, #e3f0fa 45%, #eaf4fc 60%, #eee9fc 75%, #f5f3ff 90%, #f0eeff 100%)",
           backgroundSize: "400% 400%",
           animation: "hero-mesh 15s ease infinite",
         }}
@@ -42,7 +42,7 @@ export default function Hero() {
             width: "550px",
             height: "550px",
             background:
-              "radial-gradient(circle, rgba(139,92,246,0.25) 0%, rgba(124,58,237,0.12) 40%, transparent 70%)",
+              "radial-gradient(circle, rgba(137,126,227,0.25) 0%, rgba(137,126,227,0.12) 40%, transparent 70%)",
             filter: "blur(40px)",
             animation: "blob-morph-1 12s ease-in-out infinite",
           }}
@@ -57,7 +57,7 @@ export default function Hero() {
             width: "480px",
             height: "480px",
             background:
-              "radial-gradient(circle, rgba(6,182,212,0.2) 0%, rgba(14,165,233,0.1) 40%, transparent 70%)",
+              "radial-gradient(circle, rgba(70,159,221,0.2) 0%, rgba(70,159,221,0.1) 40%, transparent 70%)",
             filter: "blur(40px)",
             animation: "blob-morph-2 10s ease-in-out infinite",
           }}
@@ -72,7 +72,7 @@ export default function Hero() {
             width: "700px",
             height: "500px",
             background:
-              "radial-gradient(ellipse, rgba(99,102,241,0.15) 0%, rgba(79,70,229,0.06) 40%, transparent 65%)",
+              "radial-gradient(ellipse, rgba(108,112,233,0.15) 0%, rgba(108,112,233,0.06) 40%, transparent 65%)",
             filter: "blur(60px)",
             animation: "blob-morph-3 14s ease-in-out infinite",
           }}
@@ -87,7 +87,7 @@ export default function Hero() {
             width: "400px",
             height: "400px",
             background:
-              "radial-gradient(circle, rgba(236,72,153,0.12) 0%, rgba(244,63,94,0.05) 40%, transparent 70%)",
+              "radial-gradient(circle, rgba(137,126,227,0.12) 0%, rgba(108,112,233,0.05) 40%, transparent 70%)",
             filter: "blur(50px)",
             animation: "blob-morph-4 11s ease-in-out infinite",
           }}
@@ -102,7 +102,7 @@ export default function Hero() {
             width: "350px",
             height: "350px",
             background:
-              "radial-gradient(circle, rgba(20,184,166,0.12) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(70,159,221,0.12) 0%, transparent 65%)",
             filter: "blur(45px)",
             animation: "blob-morph-2 13s ease-in-out infinite reverse",
           }}
@@ -114,7 +114,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(124,58,237,0.06) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(137,126,227,0.06) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
           maskImage:
             "radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%)",
@@ -152,11 +152,11 @@ export default function Hero() {
           style={{
             background: "rgba(255,255,255,0.75)",
             backdropFilter: "blur(12px)",
-            border: "1px solid rgba(124,58,237,0.2)",
+            border: "1px solid rgba(137,126,227,0.2)",
             borderRadius: "100px",
             padding: "6px 16px",
             boxShadow:
-              "0 2px 12px rgba(124,58,237,0.12), 0 0 0 1px rgba(255,255,255,0.5) inset",
+              "0 2px 12px rgba(137,126,227,0.12), 0 0 0 1px rgba(255,255,255,0.5) inset",
           }}
         >
           <span className="relative flex items-center justify-center">
@@ -255,20 +255,20 @@ export default function Hero() {
             className="btn-shimmer inline-flex items-center text-[15px] font-semibold text-white rounded-full"
             style={{
               background:
-                "linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)",
+                "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)",
               padding: "14px 28px",
-              boxShadow: "0 4px 20px rgba(124,58,237,0.4)",
+              boxShadow: "0 4px 20px rgba(137,126,227,0.4)",
               transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
               e.currentTarget.style.boxShadow =
-                "0 8px 30px rgba(124,58,237,0.5)";
+                "0 8px 30px rgba(137,126,227,0.5)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
               e.currentTarget.style.boxShadow =
-                "0 4px 20px rgba(124,58,237,0.4)";
+                "0 4px 20px rgba(137,126,227,0.4)";
             }}
             onMouseDown={(e) =>
               (e.currentTarget.style.transform = "scale(0.97)")
@@ -286,19 +286,19 @@ export default function Hero() {
             style={{
               background: "rgba(255,255,255,0.65)",
               backdropFilter: "blur(12px)",
-              border: "1.5px solid rgba(124,58,237,0.25)",
+              border: "1.5px solid rgba(137,126,227,0.25)",
               padding: "14px 28px",
               color: "#374151",
               transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "rgba(124,58,237,0.06)";
-              e.currentTarget.style.borderColor = "rgba(124,58,237,0.4)";
-              e.currentTarget.style.color = "#7C3AED";
+              e.currentTarget.style.background = "rgba(137,126,227,0.06)";
+              e.currentTarget.style.borderColor = "rgba(137,126,227,0.4)";
+              e.currentTarget.style.color = "#897EE3";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "rgba(255,255,255,0.65)";
-              e.currentTarget.style.borderColor = "rgba(124,58,237,0.25)";
+              e.currentTarget.style.borderColor = "rgba(137,126,227,0.25)";
               e.currentTarget.style.color = "#374151";
             }}
           >
