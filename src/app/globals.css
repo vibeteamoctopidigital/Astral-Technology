@@ -366,11 +366,11 @@ input, textarea, select, button {
   border: 1px solid #E9E4F5 !important;
   border-right: none !important;
   border-radius: 9px 0 0 9px !important;
-  padding: 0 10px !important;
-  height: auto !important;
-  min-height: 42px;
+  padding: 0 8px !important;
+  height: 42px !important;
   background: #FFFFFF !important;
   transition: border-color 0.18s, box-shadow 0.18s;
+  gap: 4px !important;
 }
 
 .contact-phone-wrapper .react-international-phone-country-selector-button:focus,
@@ -385,6 +385,16 @@ input, textarea, select, button {
 
 .contact-phone-wrapper .react-international-phone-country-selector-button__dropdown-arrow {
   border-top-color: #C4B5FD !important;
+  margin-left: 2px !important;
+}
+
+/* Dial code text */
+.contact-phone-wrapper .react-international-phone-dial-code-preview {
+  font-size: 13.5px !important;
+  color: #0F172A !important;
+  margin: 0 !important;
+  padding: 0 4px 0 0 !important;
+  font-family: inherit !important;
 }
 
 .contact-phone-wrapper input.react-international-phone-input,
@@ -396,8 +406,7 @@ input, textarea, select, button {
   color: #0F172A !important;
   background: #FFFFFF !important;
   padding: 11px 14px !important;
-  height: auto !important;
-  min-height: 42px;
+  height: 42px !important;
   outline: none !important;
   font-family: inherit !important;
   transition: border-color 0.18s, box-shadow 0.18s;
@@ -408,6 +417,17 @@ input, textarea, select, button {
 .contact-phone-wrapper input.contact-phone-input:focus {
   border-color: #897EE3 !important;
   box-shadow: 0 0 0 3px rgba(137,126,227,0.07);
+}
+
+/* Hide browser email validation icon */
+input[type="email"]::-webkit-contacts-auto-fill-button,
+input[type="email"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  margin: 0;
 }
 
 /* Dropdown styling */

@@ -283,7 +283,7 @@ export default function Footer() {
                       </label>
                       <input
                         type="text"
-                        placeholder="Alex Johnson"
+                        placeholder="Your name"
                         required
                         style={inputBase}
                         onFocus={handleFocus}
@@ -296,7 +296,7 @@ export default function Footer() {
                       </label>
                       <input
                         type="email"
-                        placeholder="alex@company.com"
+                        placeholder="Your email"
                         required
                         style={inputBase}
                         onFocus={handleFocus}
@@ -316,13 +316,7 @@ export default function Footer() {
                       onChange={setPhone}
                       inputClassName="contact-phone-input"
                       className="contact-phone-wrapper"
-                      inputStyle={{
-                        ...inputBase,
-                        width: "100%",
-                        borderLeft: "none",
-                        borderTopLeftRadius: 0,
-                        borderBottomLeftRadius: 0,
-                      }}
+                      placeholder="Your phone number"
                     />
                   </div>
 
