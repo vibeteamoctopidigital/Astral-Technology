@@ -54,7 +54,7 @@ function AnimatedCounter({
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="gradient-text" style={{ fontSize: "48px", fontWeight: 500 }}>
+    <span ref={ref} className="gradient-text" style={{ fontSize: "48px", fontWeight: 400 }}>
       {displayValue}
       {suffix}
     </span>
@@ -113,8 +113,8 @@ export default function Stats() {
               <h3
                 style={{
                   fontSize: "16px",
-                  fontWeight: 500,
-                  color: "#0F172A",
+                  fontWeight: 400,
+                  color: "#000000",
                   marginTop: "8px",
                   marginBottom: "4px",
                 }}

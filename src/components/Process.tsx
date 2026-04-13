@@ -265,11 +265,11 @@ export default function Process() {
           </span>
           <h2
             style={{
-              fontSize: "clamp(40px, 5vw, 64px)",
-              fontWeight: 500,
-              color: "#0F172A",
-              letterSpacing: "-0.03em",
-              lineHeight: 1.1,
+              fontSize: "48px",
+              fontWeight: 400,
+              color: "#000000",
+              letterSpacing: "-1px",
+              lineHeight: "70px",
               margin: 0,
             }}
           >
@@ -279,8 +279,9 @@ export default function Process() {
           </h2>
           <p
             style={{
-              fontSize: 17,
-              color: "#94A3B8",
+              fontSize: 16,
+              fontWeight: 400,
+              color: "#000000",
               lineHeight: 1.75,
               maxWidth: 460,
               margin: "16px auto 0",

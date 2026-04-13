@@ -118,8 +118,8 @@ function TechCard({ tech, index }: { tech: TechItem; index: number }) {
       <span
         style={{
           fontSize: "12px",
-          fontWeight: 500,
-          color: hovered ? "#0F172A" : "#64748B",
+          fontWeight: 400,
+          color: hovered ? "#000000" : "#64748B",
           textAlign: "center",
           transition: "color 0.15s",
         }}

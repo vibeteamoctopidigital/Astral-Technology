@@ -494,8 +494,8 @@ export default function Services() {
           >
             {/* Left */}
             <div className="order-2 lg:order-1">
-              <h3 style={{ fontSize: "32px", fontWeight: 500, letterSpacing: "-0.02em", color: "#0F172A", marginBottom: "12px" }}>{tab.title}</h3>
-              <p style={{ fontSize: "16px", color: "#475569", lineHeight: 1.8, marginBottom: "28px", maxWidth: "440px" }}>{tab.description}</p>
+              <h3 style={{ fontSize: "32px", fontWeight: 400, letterSpacing: "-1px", color: "#000000", marginBottom: "12px" }}>{tab.title}</h3>
+              <p style={{ fontSize: "16px", fontWeight: 400, color: "#000000", lineHeight: 1.8, marginBottom: "28px", maxWidth: "440px" }}>{tab.description}</p>
 
               <motion.ul initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.06 } } }} className="flex flex-col" style={{ gap: "12px" }}>
                 {tab.features.map((f) => (

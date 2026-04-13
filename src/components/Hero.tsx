@@ -186,10 +186,10 @@ export default function Hero() {
         <h1
           className="flex flex-col items-center"
           style={{
-            fontSize: "clamp(44px, 6.5vw, 80px)",
-            fontWeight: 500,
-            letterSpacing: "-0.03em",
-            lineHeight: 1.1,
+            fontSize: "48px",
+            fontWeight: 400,
+            letterSpacing: "-1px",
+            lineHeight: "70px",
           }}
         >
           <span className="flex flex-wrap justify-center gap-x-[0.3em]">
@@ -231,8 +231,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto"
           style={{
-            fontSize: "19px",
-            color: "#475569",
+            fontSize: "16px",
+            fontWeight: 400,
+            color: "#000000",
             lineHeight: 1.75,
             maxWidth: "560px",
             marginTop: "28px",

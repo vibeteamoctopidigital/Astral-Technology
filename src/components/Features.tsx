@@ -92,8 +92,8 @@ function FeatureCard({
       <h3
         style={{
           fontSize: "18px",
-          fontWeight: 500,
-          color: "#0F172A",
+          fontWeight: 400,
+          color: "#000000",
           marginBottom: "10px",
           letterSpacing: "-0.01em",
         }}

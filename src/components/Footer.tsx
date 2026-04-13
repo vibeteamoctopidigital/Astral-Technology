@@ -143,11 +143,11 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.06 }}
               style={{
-                fontSize: "clamp(36px, 4.5vw, 56px)",
-                fontWeight: 500,
-                color: "#0F172A",
-                letterSpacing: "-0.03em",
-                lineHeight: 1.1,
+                fontSize: "48px",
+                fontWeight: 400,
+                color: "#000000",
+                letterSpacing: "-1px",
+                lineHeight: "70px",
                 marginBottom: 16,
               }}
             >
@@ -155,12 +155,7 @@ export default function Footer() {
               <br />
               something{" "}
               <span
-                style={{
-                  background: "linear-gradient(135deg, #897EE3, #469FDD)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
+                className="gradient-text"
               >
                 together.
               </span>
@@ -172,9 +167,10 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
               style={{
-                fontSize: 15,
-                color: "#94A3B8",
-                lineHeight: 1.7,
+                fontSize: 16,
+                fontWeight: 400,
+                color: "#000000",
+                lineHeight: 1.75,
                 maxWidth: 300,
                 marginBottom: 40,
               }}
