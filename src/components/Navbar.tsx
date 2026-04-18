@@ -67,8 +67,8 @@ export default function Navbar() {
               style={{
                 marginLeft: 6,
                 fontFamily: "var(--font-noto-serif), 'Noto Serif', serif",
-                fontStyle: "italic",
-                fontWeight: 400,
+                fontStyle: "normal",
+                fontWeight: 500,
                 fontSize: "19px",
                 letterSpacing: "0",
                 color: "#0F172A",
