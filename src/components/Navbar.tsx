@@ -61,7 +61,7 @@ export default function Navbar() {
             <img
               src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
               alt="Astral Technology"
-              style={{ height: "28px", width: "auto", filter: "brightness(0)" }}
+              style={{ height: "38px", width: "auto", filter: "brightness(0)" }}
             />
             <span
               style={{
@@ -69,7 +69,7 @@ export default function Navbar() {
                 fontFamily: "var(--font-noto-serif), 'Noto Serif', serif",
                 fontStyle: "normal",
                 fontWeight: 500,
-                fontSize: "18px",
+                fontSize: "20px",
                 letterSpacing: "0",
                 color: "#0F172A",
                 whiteSpace: "nowrap",
