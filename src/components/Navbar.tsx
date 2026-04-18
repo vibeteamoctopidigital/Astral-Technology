@@ -65,11 +65,11 @@ export default function Navbar() {
             />
             <span
               style={{
-                marginLeft: 4,
-                fontFamily: "var(--font-noto-serif), serif",
-                fontWeight: 600,
-                fontSize: "19px",
-                letterSpacing: "-0.01em",
+                marginLeft: 6,
+                fontFamily: "inherit",
+                fontWeight: 500,
+                fontSize: "15px",
+                letterSpacing: "-0.005em",
                 color: "#0F172A",
                 whiteSpace: "nowrap",
               }}
