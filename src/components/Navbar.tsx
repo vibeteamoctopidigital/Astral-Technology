@@ -61,18 +61,19 @@ export default function Navbar() {
             <img
               src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
               alt="Astral Technology"
-              style={{ height: "48px", width: "auto", filter: "brightness(0)" }}
+              style={{ height: "28px", width: "auto", filter: "brightness(0)" }}
             />
             <span
               style={{
-                marginLeft: 6,
+                marginLeft: 8,
                 fontFamily: "var(--font-noto-serif), 'Noto Serif', serif",
                 fontStyle: "normal",
                 fontWeight: 500,
-                fontSize: "19px",
+                fontSize: "18px",
                 letterSpacing: "0",
                 color: "#0F172A",
                 whiteSpace: "nowrap",
+                lineHeight: 1,
               }}
             >
               Astral Technology
