@@ -11,9 +11,10 @@ const logos = [
 ];
 
 export default function LogoSlider() {
-  // Duplicate twice — animation shifts by exactly one copy (-50%),
-  // then loops seamlessly because the second half matches the first.
-  const track = [...logos, ...logos];
+  // Duplicate 4× — animation shifts by exactly one copy (-25%) and loops
+  // seamlessly. Extra copies guarantee the track is always wider than the
+  // viewport, so there's never a visible gap at any screen size.
+  const track = [...logos, ...logos, ...logos, ...logos];
 
   return (
     <div
@@ -28,7 +29,7 @@ export default function LogoSlider() {
         className="flex items-center marquee-track"
         style={{
           width: "max-content",
-          animation: "marquee 30s linear infinite",
+          animation: "marquee 40s linear infinite",
         }}
       >
         {track.map((logo, i) => (

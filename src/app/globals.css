@@ -262,7 +262,7 @@ input, textarea, select, button {
 
 @keyframes marquee {
   0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(-25%, 0, 0); }
 }
 
 .marquee-track {
@@ -376,6 +376,35 @@ input, textarea, select, button {
   animation-play-state: paused;
 }
 
+/* ===== Hero mobile fixes — prevent blob overflow / banding / horizontal scroll ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (max-width: 640px) {
+  #home {
+    overflow-x: hidden;
+  }
+  /* Reduce blur radius on the large blobs — mobile GPUs render big blurs
+     with visible banding / seams. Smaller blur = smoother output. */
+  .hero-blobs > div {
+    filter: blur(22px) !important;
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* Cap each blob's visible footprint so they don't extend off-screen */
+  .hero-blobs > div:nth-child(1),
+  .hero-blobs > div:nth-child(2),
+  .hero-blobs > div:nth-child(3),
+  .hero-blobs > div:nth-child(4),
+  .hero-blobs > div:nth-child(5) {
+    max-width: 70vw;
+    max-height: 70vw;
+  }
+}
+
 /* ===== Mobile service cards (iOS-style glass, smoother scroll reveal) ===== */
 .mobile-service-card {
   background: rgba(255, 255, 255, 0.7) !important;
@@ -469,6 +498,13 @@ input, textarea, select, button {
 .contact-phone-wrapper.react-international-phone-input-container {
   display: flex;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.contact-phone-wrapper.react-international-phone-input-container * {
+  box-sizing: border-box;
 }
 
 .contact-phone-wrapper .react-international-phone-country-selector-button {
@@ -519,7 +555,29 @@ input, textarea, select, button {
   outline: none !important;
   font-family: inherit !important;
   transition: border-color 0.18s, box-shadow 0.18s;
-  flex: 1;
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Match name/email input heights to the phone input so the whole form
+   aligns, especially on mobile where fields stack */
+.contact-form-input,
+.contact-email-input {
+  min-height: 42px !important;
+}
+
+@media (max-width: 640px) {
+  .contact-phone-wrapper.react-international-phone-input-container {
+    width: 100% !important;
+  }
+  .contact-phone-wrapper .react-international-phone-country-selector-button {
+    padding: 0 6px !important;
+  }
+  .contact-phone-wrapper input.react-international-phone-input,
+  .contact-phone-wrapper input.contact-phone-input {
+    padding: 11px 10px !important;
+  }
 }
 
 .contact-phone-wrapper input.react-international-phone-input:focus,

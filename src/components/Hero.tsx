@@ -32,7 +32,7 @@ export default function Hero() {
       />
 
       {/* Animated color blobs - morphing shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
+      <div className="hero-blobs absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
         {/* Purple blob - top left */}
         <div
           className="absolute"
