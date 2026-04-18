@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Build and scale your startup with a dedicated technology team. Full-stack development, design, and DevOps — everything you need to move fast.",
     images: [
-      "https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png",
+      "https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3e970c56ad27908b655ad.png",
     ],
     type: "website",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Build and scale your startup with a dedicated technology team. Full-stack development, design, and DevOps — everything you need to move fast.",
     images: [
-      "https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png",
+      "https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3e970c56ad27908b655ad.png",
     ],
   },
 };
