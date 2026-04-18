@@ -370,15 +370,43 @@ export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
   const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [inView, setInView] = useState(false);
   const progressRef = useRef(0);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const hasStartedRef = useRef(false);
   const tab = tabs[activeTab];
 
   const DURATION = 3000;
   const TICK = 30;
 
-  // Progress bar tick — only updates progress, never changes tab
+  // Start rotation only when the section scrolls into view.
+  // Reset to the first tab on the initial reveal so the user always
+  // sees "Full-Stack Dev" first, not whatever happened to be active.
   useEffect(() => {
-    if (paused) return;
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+        setInView(visible);
+        if (visible && !hasStartedRef.current) {
+          hasStartedRef.current = true;
+          setActiveTab(0);
+          progressRef.current = 0;
+          setProgress(0);
+        }
+      },
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Progress bar tick — runs only while the section is visible and not paused
+  useEffect(() => {
+    if (paused || !inView) return;
 
     const id = setInterval(() => {
       progressRef.current += (TICK / DURATION) * 100;
@@ -386,7 +414,7 @@ export default function Services() {
     }, TICK);
 
     return () => clearInterval(id);
-  }, [paused]);
+  }, [paused, inView]);
 
   // When progress hits 100, advance tab
   useEffect(() => {
@@ -404,7 +432,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" style={{ background: "#FFFFFF", padding: "96px 0" }}>
+    <section ref={sectionRef} id="services" style={{ background: "#FFFFFF", padding: "96px 0" }}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -422,10 +450,10 @@ export default function Services() {
           <p className="section-subtext">From concept to deployment, we cover every aspect of your technology stack with expertise and precision.</p>
         </motion.div>
 
-        {/* Tabs */}
+        {/* Tabs (hidden on phone — phone shows a scroll-driven stack below) */}
         <motion.div
           variants={fadeUp}
-          className="flex flex-wrap justify-center"
+          className="hidden sm:flex flex-wrap justify-center"
           style={{ gap: "10px", marginTop: "48px", marginBottom: "40px" }}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
@@ -479,7 +507,7 @@ export default function Services() {
           })}
         </motion.div>
 
-        {/* Content */}
+        {/* Content (desktop / tablet single-card tabbed view) */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -487,7 +515,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="grid grid-cols-1 lg:grid-cols-2 items-center"
+            className="hidden sm:grid grid-cols-1 lg:grid-cols-2 items-center"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
             style={{ gap: "48px", minHeight: "480px" }}
@@ -561,6 +589,116 @@ export default function Services() {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Phone-only: scroll-driven stack. Each service slides up from the
+            bottom as it enters view, and slides back down when scrolled past. */}
+        <div className="sm:hidden flex flex-col" style={{ gap: "32px", marginTop: "24px" }}>
+          {tabs.map((t, i) => {
+            const Mockup = i === 5 ? null : mockups[i];
+            return (
+              <motion.div
+                key={`mobile-${t.label}`}
+                initial={{ opacity: 0, y: 80, scale: 0.96 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 60, scale: 0.96 }}
+                viewport={{ once: false, amount: 0.2, margin: "-8% 0px -8% 0px" }}
+                transition={{
+                  duration: 0.7,
+                  ease: [0.16, 1, 0.3, 1],
+                  opacity: { duration: 0.5 },
+                }}
+                className="mobile-service-card"
+                style={{
+                  borderRadius: "22px",
+                  padding: "20px",
+                }}
+              >
+                <div
+                  className="inline-flex items-center"
+                  style={{
+                    gap: "8px",
+                    background: t.gradient,
+                    color: "white",
+                    borderRadius: "100px",
+                    padding: "6px 14px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                    marginBottom: "16px",
+                  }}
+                >
+                  {t.tabIconType === "iconify" ? (
+                    <span style={{ filter: "brightness(0) invert(1)", display: "flex" }}>
+                      <Icon icon={t.tabIcon} width={14} height={14} />
+                    </span>
+                  ) : (
+                    <ShieldCheck size={14} />
+                  )}
+                  {t.label}
+                </div>
+
+                <h3 style={{ fontSize: "24px", fontWeight: 500, letterSpacing: "-0.5px", color: "#000000", marginBottom: "10px", lineHeight: 1.2 }}>
+                  {t.title}
+                </h3>
+                <p style={{ fontSize: "14.5px", color: "#334155", lineHeight: 1.65, marginBottom: "18px" }}>
+                  {t.description}
+                </p>
+
+                <ul className="flex flex-col" style={{ gap: "10px", marginBottom: "18px" }}>
+                  {t.features.map((f) => (
+                    <li key={f} className="flex items-start" style={{ gap: "10px" }}>
+                      <span
+                        className="flex items-center justify-center flex-shrink-0"
+                        style={{ width: "20px", height: "20px", borderRadius: "50%", background: `${t.accent}1F`, marginTop: "1px" }}
+                      >
+                        <Check size={11} style={{ color: t.accent }} />
+                      </span>
+                      <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.5 }}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap" style={{ gap: "6px", marginBottom: "20px" }}>
+                  {t.pills.map((p) => {
+                    const pillData = getTechData(p);
+                    return (
+                      <span
+                        key={p}
+                        className="inline-flex items-center"
+                        style={{
+                          gap: "5px",
+                          background: "#F8FAFC",
+                          border: "1px solid #E2E8F0",
+                          borderRadius: "8px",
+                          padding: "4px 10px",
+                          fontSize: "12px",
+                          fontWeight: 500,
+                          color: "#475569",
+                        }}
+                      >
+                        <Icon icon={pillData.icon} width={13} height={13} />
+                        {p}
+                      </span>
+                    );
+                  })}
+                </div>
+
+                <div
+                  className="mockup-responsive"
+                  style={{
+                    background: "rgba(248, 250, 252, 0.8)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    borderRadius: "16px",
+                    padding: "14px",
+                    border: "1px solid rgba(241, 245, 249, 0.9)",
+                  }}
+                >
+                  {i === 5 ? <SecurityTerminalMockup activeKey={i} /> : Mockup ? <Mockup /> : null}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </motion.div>
     </section>
   );

@@ -1,8 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/neue-montreal');
 @import "tailwindcss";
 
+/* Metric-matched fallback for Neue Montreal so Safari/Edge render
+   at near-identical widths/line-heights if the CDN is slow or fails.
+   size-adjust / ascent-override / descent-override normalize the fallback
+   (system-ui / Segoe UI / -apple-system) to match Neue Montreal metrics. */
+@font-face {
+  font-family: 'Neue Montreal Fallback';
+  src: local('Segoe UI'), local('-apple-system'), local('system-ui'), local('Arial');
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 103%;
+}
+
 @theme inline {
-  --font-sans: 'Neue Montreal', 'NeueMontreal', sans-serif;
+  --font-sans: 'Neue Montreal', 'NeueMontreal', 'Neue Montreal Fallback', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-serif: var(--font-noto-serif);
 }
 
@@ -48,14 +62,17 @@ html {
 *,
 *::before,
 *::after {
-  font-family: 'Neue Montreal', 'NeueMontreal', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Neue Montreal', 'NeueMontreal', 'Neue Montreal Fallback', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-  font-family: 'Neue Montreal', 'NeueMontreal', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Neue Montreal', 'NeueMontreal', 'Neue Montreal Fallback', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-text-size-adjust: 100%;
   color: var(--dark);
   background: var(--white);
   overflow-x: hidden;
@@ -178,6 +195,29 @@ input, textarea, select, button {
   color: #000000;
 }
 
+@media (max-width: 640px) {
+  .section-heading {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  .section-label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  .section-subtext {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-heading {
+    font-size: 26px;
+  }
+}
+
 .section-subtext {
   font-size: 16px;
   font-weight: 400;
@@ -221,8 +261,16 @@ input, textarea, select, button {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquee-track {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000px;
 }
 
 @keyframes marquee-reverse {
@@ -326,6 +374,58 @@ input, textarea, select, button {
 /* Marquee pause on hover */
 .marquee-container:hover .marquee-track {
   animation-play-state: paused;
+}
+
+/* ===== Mobile service cards (iOS-style glass, smoother scroll reveal) ===== */
+.mobile-service-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Mockups overflow their phone viewport — scale the inner content down
+   on narrow widths so each mockup fits cleanly inside the card. */
+.mockup-responsive {
+  width: 100%;
+  overflow: hidden;
+}
+.mockup-responsive > * {
+  transform-origin: top left;
+  width: 100%;
+}
+@media (max-width: 420px) {
+  .mockup-responsive {
+    /* Scale down mockup content to fit the phone while preserving layout */
+    font-size: 11px;
+  }
+  .mockup-responsive > * {
+    transform: scale(0.82);
+    width: 121.95%; /* 100 / 0.82 */
+    margin-bottom: -16%;
+  }
+}
+@media (max-width: 360px) {
+  .mockup-responsive > * {
+    transform: scale(0.72);
+    width: 138.88%;
+    margin-bottom: -24%;
+  }
+}
+
+/* Smoother scrolling for the mobile stack + momentum on iOS */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Terminal typing lines */
@@ -437,6 +537,50 @@ input[type="email"]::-webkit-credentials-auto-fill-button {
   height: 0;
   width: 0;
   margin: 0;
+}
+
+/* Keep typed text visible even when extensions inject overlay icons */
+input.contact-email-input,
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+textarea {
+  color: #0F172A !important;
+  -webkit-text-fill-color: #0F172A !important;
+  background-clip: padding-box !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Force the email input's border and background to stay visible,
+   even if an extension (Trustifi, Boomerang, Mailtrack, etc.) injects an overlay */
+input.contact-email-input {
+  border: 1px solid #E9E4F5 !important;
+  background: #FFFFFF !important;
+  padding-right: 52px !important;
+  box-sizing: border-box !important;
+  min-height: 42px !important;
+}
+
+input.contact-email-input:focus {
+  border-color: #897EE3 !important;
+  box-shadow: 0 0 0 3px rgba(137,126,227,0.07) !important;
+}
+
+/* Push any extension-injected sibling / overlay out of the way,
+   so typed text stays visible */
+input.contact-email-input ~ *[class*="trustifi"],
+input.contact-email-input ~ iframe,
+input.contact-email-input + * {
+  pointer-events: auto;
+}
+
+input[type="email"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill {
+  -webkit-text-fill-color: #0F172A !important;
+  -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+  box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+  caret-color: #0F172A !important;
 }
 
 /* Dropdown styling */

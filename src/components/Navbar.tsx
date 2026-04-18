@@ -59,14 +59,27 @@ export default function Navbar() {
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             <img
-              src="https://astral-system.com/wp-content/uploads/2025/12/astral-logo.svg"
+              src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
               alt="Astral Technology"
-              style={{ height: "32px" }}
+              style={{ height: "48px", width: "auto", filter: "brightness(0)" }}
             />
+            <span
+              style={{
+                marginLeft: 4,
+                fontFamily: "var(--font-noto-serif), serif",
+                fontWeight: 600,
+                fontSize: "19px",
+                letterSpacing: "-0.01em",
+                color: "#0F172A",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Astral Technology
+            </span>
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -88,7 +101,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href="#contact"
-            className="hidden md:inline-flex btn-shimmer items-center text-[14px] font-semibold text-white rounded-full"
+            className="hidden lg:inline-flex btn-shimmer items-center text-[14px] font-semibold text-white rounded-full"
             style={{
               background: "linear-gradient(135deg, #897EE3 0%, #6C70E9 100%)",
               padding: "10px 22px",
@@ -118,7 +131,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             style={{ color: "var(--gray-500)" }}
           >
             <AnimatePresence mode="wait">
@@ -156,7 +169,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden"
+            className="lg:hidden"
             style={{
               background: "rgba(255,255,255,0.98)",
               backdropFilter: "blur(20px)",

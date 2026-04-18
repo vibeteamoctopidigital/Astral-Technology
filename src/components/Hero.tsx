@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       id="home"
       className="relative flex flex-col items-center justify-center overflow-hidden"
-      style={{ minHeight: "100vh", paddingTop: "120px" }}
+      style={{ paddingTop: "80px" }}
     >
       {/* === ANIMATED MESH GRADIENT BACKGROUND === */}
 
@@ -313,13 +313,13 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Logo marquee strip — flush at bottom, no gap */}
+      {/* Logo marquee strip — sits right below the CTA buttons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.9 }}
-        className="w-full mt-auto"
-        style={{ zIndex: 1 }}
+        className="w-full"
+        style={{ zIndex: 1, marginTop: "56px" }}
       >
         <LogoSlider />
       </motion.div>

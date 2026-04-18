@@ -11,9 +11,9 @@ const logos = [
 ];
 
 export default function LogoSlider() {
-  // Render two identical tracks side by side — the animation shifts
-  // by exactly one track width (-50%), then resets, creating a seamless loop.
-  const track = [...logos, ...logos, ...logos, ...logos];
+  // Duplicate twice — animation shifts by exactly one copy (-50%),
+  // then loops seamlessly because the second half matches the first.
+  const track = [...logos, ...logos];
 
   return (
     <div
@@ -21,13 +21,14 @@ export default function LogoSlider() {
       style={{
         background: "linear-gradient(90deg, #469FDD 0%, #6C70E9 50%, #897EE3 100%)",
         padding: "14px 0",
+        transform: "translateZ(0)",
       }}
     >
       <div
         className="flex items-center marquee-track"
         style={{
           width: "max-content",
-          animation: "marquee 40s linear infinite",
+          animation: "marquee 30s linear infinite",
         }}
       >
         {track.map((logo, i) => (
@@ -39,10 +40,16 @@ export default function LogoSlider() {
             <img
               src={logo.src}
               alt={logo.alt}
+              loading="eager"
+              decoding="async"
+              draggable={false}
               style={{
                 height: "28px",
+                width: "auto",
                 objectFit: "contain",
                 filter: "brightness(0) invert(1)",
+                userSelect: "none",
+                pointerEvents: "none",
               }}
             />
           </span>

@@ -290,14 +290,23 @@ export default function Footer() {
                       <label style={labelBase}>
                         Email <span style={{ color: "#897EE3" }}>*</span>
                       </label>
-                      <input
-                        type="email"
-                        placeholder="Your email"
-                        required
-                        style={inputBase}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                      />
+                      <div style={{ position: "relative" }}>
+                        <input
+                          type="email"
+                          placeholder="Your email"
+                          required
+                          data-lpignore="true"
+                          data-form-type="other"
+                          data-1p-ignore="true"
+                          data-bwignore="true"
+                          autoComplete="off"
+                          className="contact-email-input"
+                          style={{ ...inputBase, paddingRight: 52 }}
+                          onFocus={handleFocus}
+                          onBlur={handleBlur}
+                          suppressHydrationWarning
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -393,9 +402,9 @@ export default function Footer() {
             <div className="footer-col-logo">
               <div style={{ marginBottom: 24 }}>
                 <img
-                  src="https://astral-system.com/wp-content/uploads/2025/12/astral-logo.svg"
+                  src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
                   alt="Astral Technology"
-                  style={{ height: 28, filter: "brightness(0) invert(1)" }}
+                  style={{ height: 64, width: "auto" }}
                 />
               </div>
 
@@ -489,13 +498,13 @@ export default function Footer() {
               <span style={colHeading}>Get in Touch</span>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <a
-                  href="mailto:isa@myastraltech.com"
+                  href="mailto:info@myastraltech.com"
                   style={{ display: "flex", alignItems: "center", gap: 8, fontSize: "12.5px", color: "rgba(255,255,255,0.42)", textDecoration: "none", transition: "color 0.15s" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.42)")}
                 >
                   <Mail size={13} style={{ opacity: 0.55 }} />
-                  isa@myastraltech.com
+                  info@myastraltech.com
                 </a>
                 <a
                   href="https://wa.me/12368864928"
