@@ -402,9 +402,9 @@ export default function Footer() {
             <div className="footer-col-logo">
               <div style={{ marginBottom: 24 }}>
                 <img
-                  src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
+                  src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e6fba86da81710db1ef2e0.svg"
                   alt="Astral Technology"
-                  style={{ height: 64, width: "auto" }}
+                  style={{ height: 64, width: "auto", filter: "brightness(0) invert(1)" }}
                 />
               </div>
 

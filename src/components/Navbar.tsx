@@ -46,7 +46,7 @@ export default function Navbar() {
         <div
           className="flex items-center justify-between"
           style={{
-            height: scrolled ? "60px" : "72px",
+            height: scrolled ? "72px" : "84px",
             transition: "height 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         >
@@ -59,27 +59,10 @@ export default function Navbar() {
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             <img
-              src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e3ea2e38381eafa8635941.png"
+              src="https://assets.cdn.filesafe.space/VCuRrweOCvIBspfmXXkp/media/69e6fba86da81710db1ef2e0.svg"
               alt="Astral Technology"
-              style={{ height: "46px", width: "auto", filter: "brightness(0)", display: "block" }}
+              style={{ height: "56px", width: "auto", display: "block" }}
             />
-            <span
-              style={{
-                marginLeft: 10,
-                fontFamily: "var(--font-noto-serif), 'Noto Serif', serif",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontSize: "20px",
-                letterSpacing: "0",
-                color: "#0F172A",
-                whiteSpace: "nowrap",
-                lineHeight: "1",
-                display: "inline-flex",
-                alignItems: "center",
-              }}
-            >
-              Astral Technology
-            </span>
           </a>
 
           {/* Desktop nav */}
